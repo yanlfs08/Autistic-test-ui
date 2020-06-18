@@ -1,0 +1,31 @@
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row justify-content-center class="content">
+      <ion-col sizeSm="8">
+        <ion-toolbar>
+          <ion-title class="title-term ion-header">
+            <h1>Triagem M-CHART-R</h1>
+            <h3></h3>
+          </ion-title>
+        </ion-toolbar>
+        <form (ngSubmit)="onSubmit()">
+          <div *ngFor="let question of questions; index as i" class="questions">
+            <label id="question_{{i}}">{{questions[i]}}</label>
+            <mat-radio-group aria-labelledby="example-radio-group-label-{{i}}" class="example-radio-group"
+              [(ngModel)]="form.responses[i]" name="group-{{i}}">
+              <mat-radio-button color="" class="example-radio-button" [value]="true">Sim</mat-radio-button>
+              <mat-radio-button class="example-radio-button" [value]="false">Não</mat-radio-button>
+            </mat-radio-group>
+          </div>
+          <ion-button expand="block" (click)="onSubmit()">
+            <ion-icon name="arrow-forward-outline" slot="start"></ion-icon>
+            Realizar teste
+          </ion-button>
+        </form>
+      </ion-col>
+    </ion-row>
+    <div class="footer">
+      <a href="https://mchatscreen.com/" class="text-center footer">&copy;2009 Robins, Fein, & Barton</a>
+    </div>
+  </ion-grid>
+</ion-content>

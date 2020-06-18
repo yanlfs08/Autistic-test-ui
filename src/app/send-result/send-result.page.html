@@ -1,0 +1,29 @@
+<ion-content>
+  <ion-grid>
+    <ion-row class="row">
+      <ion-col sizeSm="8" class="col">
+        <form [formGroup]="sendResultForm" (ngSubmit)="sendResult()">
+          <ng-container>
+            <ion-item>
+              <ion-icon name="person" color="primary" slot="start"></ion-icon>
+              <ion-input type="text" placeholder="Name" formControlName="name"></ion-input>
+            </ion-item>
+            <ion-note color="danger" *ngIf="submitted && f.name.errors && f.name.errors.required">É necessário inserir
+              nome</ion-note>
+          </ng-container>
+
+          <ion-item>
+            <ion-icon name="mail" color="primary" slot="start"></ion-icon>
+            <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
+          </ion-item>
+          <ion-note color="danger" *ngIf="submitted && f.email.errors && f.email.errors.required">É necessário inserir
+            email</ion-note>
+          <ion-note color="danger" *ngIf="submitted && f.email.errors && f.email.errors.email">É necessário inserir
+            email válido</ion-note>
+
+          <ion-button expand="block" type="submit">Enviar resultado</ion-button>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

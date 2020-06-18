@@ -1,0 +1,47 @@
+.row {
+  padding-top: 20px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.col {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: medium;
+  border: 2px solid rgb(83, 152, 161);
+  border-radius: 15px;
+  padding: 10px;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.footer {
+  text-align: center;
+  margin: 20px auto 0 auto;
+  padding-bottom: 15px;
+  font-size: 11px;
+  color: #aaa;
+}
+
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: blue;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}

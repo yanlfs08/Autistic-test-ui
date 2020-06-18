@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="white-space: normal;" class="title-term ion-header">
+      <div style="white-space: normal;">
+        Triagem de crianças com caracteristicas do espectro
+        autista
+      </div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class=" ion-padding">
+  <ion-grid>
+    <ion-row class="term">
+      <ion-col sizeSm="8">
+        <ion-label>
+          <h2>
+            O Questionário Modificado para a Triagem do Autismo em Crianças entre 16 e 30 meses, Revisado, com
+            Entrevista de
+            Seguimento (M-CHAT-R/F; Robins, Fein, & Barton, 2009) é um instrumento de triagem de dois estágios para
+            avaliar o risco
+            de Transtorno do Espectro do Autismo (TEA). O M-CHAT-R/F está disponível para download gratuito para fins
+            clínicos, de
+            pesquisa e educacionais. O download do M-CHAT-R/F e material relacionado está autorizado por
+            www.mchatscreen.com.
+            <br>
+
+          </h2>
+        </ion-label>
+        <div class="acept">
+          <h3>
+            Ao seguir com o teste você concorda e esta ciente de que ele não é
+            um diagnóstico. Somente um profissional de saúde credenciados pode
+            realizar o procedimento.
+          </h3>
+          <ion-button expand="block" (click)="goToTest()" class="btn-term">
+            <ion-icon name="arrow-forward-outline" slot="start"></ion-icon>
+            Aceito termos de uso
+          </ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+    <div class="footer">
+      <a href="https://mchatscreen.com/" class="text-center footer">&copy;2009 Robins, Fein, & Barton</a>
+    </div>
+  </ion-grid>
+</ion-content>
